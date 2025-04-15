@@ -1,25 +1,25 @@
 // import logoDark from "./logo-dark.svg";
 // import logoLight from "./logo-light.svg";
 
-import logoDark from "./cafefront.jpg";
-import logoLight from "./cafeinside.jpg";
+import logo from "./logo.jpg";
+import cafefront from "./images/cafefront.jpeg";
 
 export function Welcome() {
   return (
     <main className="container text-center">
-      <div className="row justify-content-center">
-        <header className="">
-          <div className="col">
-            <img
-              src={logoLight}
-              alt="React Router"
-              className="block w-full dark:hidden"
+      <div className="justify-content-center">
+        <header className="row justify-content-center">
+          <div>
+            <img className="col"
+              src={logo}
+              alt="Artisan Cafe Canberra logo"
             />
             <img
-              src={logoDark}
-              alt="React Router"
-              className="hidden w-full dark:block"
+              src={cafefront}
+              alt="Artisan Cafe Canberra shop front"
+              className="col"
             />
+            <h2 className="col">Artisan Cafe Canberra</h2>            
           </div>
         </header>
         <div className="row justify-content-center">
