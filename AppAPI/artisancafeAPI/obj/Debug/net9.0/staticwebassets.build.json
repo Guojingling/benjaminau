@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "mdS1kAoU9C7I9hzs6PV9JiaMEV6XCtX0J99GEV0Xo9M=",
+  "Source": "artisancafeAPI",
+  "BasePath": "_content/artisancafeAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
