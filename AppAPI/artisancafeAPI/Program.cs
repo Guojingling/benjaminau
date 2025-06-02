@@ -34,9 +34,9 @@ app.MapGet("/weatherforecast", () =>
 .WithName("GetWeatherForecast");
 
 var cafeMenu = new CafeMenulist[] {
-    new(1,  "burgerwitheggs", "burgerwitheggs.jpg"),
-    new(2,  "petty", "petty.jpg"),
-    new(2,  "prowndish", "prowndish.jpg"),
+    new(1,  "burgerwitheggs", "burgerwitheggs.jpg", 20.15),
+    new(2,  "petty", "petty.jpg", 15.50),
+    new(3,  "prowndish", "prowndish.jpg", 25.00)
 };
 
 var cafemenuApi = app.MapGroup("/cafemenu");
@@ -53,4 +53,4 @@ record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 }
 
-record CafeMenulist(int Id, string? DishName, string? ImageName, DateOnly? ValidUntil = null, bool IsShown = true);
+record CafeMenulist(int Id, string? DishName, string? ImageName, double price, DateOnly? ValidUntil = null, bool IsShown = true);
