@@ -14,6 +14,13 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+// example of a simple weather forecast API
+/**
+ * This is a simple weather forecast API that returns a list of weather forecasts.
+ * Each forecast includes the date, temperature in Celsius, and a summary.
+ * The temperature is randomly generated between -20 and 55 degrees Celsius.
+ * The summary is randomly selected from a predefined list of summaries.
+ 
 var summaries = new[]
 {
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -32,6 +39,7 @@ app.MapGet("/weatherforecast", () =>
     return forecast;
 })
 .WithName("GetWeatherForecast");
+**/
 
 var cafeMenu = new CafeMenulist[] {
     new(1,  "burgerwitheggs", "burgerwitheggs.jpg", 20.15),
@@ -47,10 +55,10 @@ cafemenuApi.MapGet("/{id}", (int id) =>
         : Results.NotFound());
 
 app.Run();
-
+/**
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
 {
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 }
-
+**/
 record CafeMenulist(int Id, string? DishName, string? ImageName, double price, DateOnly? ValidUntil = null, bool IsShown = true);
