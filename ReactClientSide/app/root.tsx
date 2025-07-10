@@ -25,7 +25,7 @@ export const links: Route.LinksFunction = () => [
     rel: "stylesheet",
     href: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css",
     integrity: "sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7",
-    crossorigin: "anonymous"
+    crossOrigin: "anonymous"
   },
 ];
 
@@ -74,7 +74,7 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
     details = error.message;
     stack = error.stack;
   }
-
+//todo: update class names to use Bootstrap styles
   return (
     <main className="pt-16 p-4 container mx-auto">
       <h1>{message}</h1>

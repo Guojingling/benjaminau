@@ -85,3 +85,7 @@ This template comes with [Tailwind CSS](https://tailwindcss.com/) already config
 ---
 
 Built with ❤️ using React Router.
+
+--root.tsx
+Set up the refrence link for css and javascript for each page.
+
