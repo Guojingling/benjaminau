@@ -1,5 +1,5 @@
 import type { M } from "node_modules/vite/dist/node/moduleRunnerTransport.d-CXw_Ws6P";
-import type { Route } from "../+types/cafemenu";
+import type { Route } from "./+types/cafemenu";
 
 
 
