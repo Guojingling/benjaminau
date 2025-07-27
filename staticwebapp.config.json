@@ -5,8 +5,8 @@
       "methods": [
         "get"
       ],
-      "rewrite": "/*",
-      "redirect": "/index.html",
+      "rewrite": "/",
+      "redirect": "/",
       "statusCode": 301,
       "allowedRoles": [
         "anonymous"
