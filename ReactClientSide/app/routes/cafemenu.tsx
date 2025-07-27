@@ -1,5 +1,4 @@
-import type { M } from "node_modules/vite/dist/node/moduleRunnerTransport.d-CXw_Ws6P";
-import type { Route } from "../+types/cafemenu";
+import type { Route } from "./+types/cafemenu";
 
 
 
@@ -14,9 +13,6 @@ export async function clientLoader({params,}: Route.ClientLoaderArgs) {
         return [];
     }
     return response;
-}
-
-export async function action() {  
 }
 
 export default function CafeMenu({loaderData,}: Route.ComponentProps) {
