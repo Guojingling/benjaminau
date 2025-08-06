@@ -33,14 +33,14 @@ export default function CafeMenu({loaderData,}: Route.ComponentProps) {
     const items = loaderData as MenuItem[];
     return (
         <div>
-            <table>
+            <table className="table-auto w-full text-left border-collapse">
             {items.map(item => (
-                <tr key={item.id}>
+                <tr key={item.id} className="table-row  align-middle  text-center   bg-dark text-white">
                     <td>Dish Name: {item.dishName}</td>
                     <td><img src= {`app/welcome/${item.imageName}`} alt={item.dishName} width="340" height="255" /></td>
                     <td>Price: {item.price}</td>
                     <td>Display Indicator: {item.IsShown}</td>
-                    <td><form action="/action_page.php" method="post"><input type="hidden" name="dishid" value={item.id} /><button type="submit">Order</button></form></td>
+                    <td><form action="/action_page.php" method="post"><input type="hidden" name="dishid" value={item.id} /><button className="btn btn-success" type="submit">Order</button></form></td>
                 </tr>
             ))}
             </table>
