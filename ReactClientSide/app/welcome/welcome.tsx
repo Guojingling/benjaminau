@@ -2,27 +2,79 @@
 // import logoLight from "./logo-light.svg";
 
 import logo from "./logo.jpg";
-import cafefront from "./images/cafefront.jpeg";
+import cafefrontdesk from "./images/cafefrontdesk.jpg";
+import petty from "./petty.jpg";
 
 export function Welcome() {
   return (
-    <main className="container text-center">
-      <div className="justify-content-center">
-        <header className="row justify-content-center">
-          <div>
-            <img className="col"
-              src={logo}
-              alt="Artisan Cafe Canberra logo"
-            />
-            <img
-              src={cafefront}
-              alt="Artisan Cafe Canberra shop front"
-              className="col"
-            />
-            <h2 className="col">Artisan Cafe Canberra</h2>            
+    <main className="container">
+        <div className="row">
+        
+          <img className="col-2" src={logo} alt="Artisan Cafe Canberra logo"/>
+         
+        </div>
+        <div className="row">
+          <h1 style={{ fontFamily: 'Monotype Corsiva' }}>Welcome to Artisan Cafe Canberra</h1>
+        </div>
+        <div className="row">
+           <p> Artisan Canberra Café is a cozy, corner spot nestled in the heart of the city, renowned for its meticulously crafted brews and delectable pastries. With its warm ambiance and dedication to quality, it's a haven for coffee aficionados and pastry enthusiasts alike, where each visit promises a delightful experience curated with artisanal flair.
+           </p>  
+           <p> "Artisan Café" is not only renowned for its meticulously crafted brews and vibrant brunch menu, using premium ingredients and artisanal techniques ensures that every bite is a flavourful journey worth savouring. With its inviting ambiance, colourful brunch offerings, and irresistible pastries, "Artisan Café" is a must-visit destination for those seeking a culinary experience that delight all senses.
+           </p>
+        </div>
+        <div className="row">
+
+           <img className="mb-5" src={cafefrontdesk} alt="Artisan Cafe Canberra shop front"/>
+        </div>
+        <div className="row">
+        <div className="col">
+          <h1 style={{ fontFamily: 'Monotype Corsiva' }}>Cafe Menu</h1>
+        </div>
+        <div className="col-auto">
+          {menuLink && (
+            <a href={menuLink.href}>
+              <button>Order Now</button>
+            </a>
+          )}
+        </div>
+        </div>
+
+        <div className="container mt-1 px-0">
+          <div className="row">
+            <div className="col-md-6">
+              <h1 style={{ fontFamily: 'Monotype Corsiva' }}>Opening Hours</h1>
+              {[
+                ["Monday", "7:00 AM - 4:00 PM"],
+                ["Tuesday", "7:00 AM - 4:00 PM"],
+                ["Wednesday", "7:00 AM - 4:00 PM"],
+                ["Thursday", "7:00 AM - 4:00 PM"],
+                ["Friday", "7:00 AM - 4:00 PM"],
+                ["Saturday", "Closed"],
+                ["Sunday", "Closed"],
+              ].map(([day, time], index) => (
+                 <div className="row mb-1" key={index}>
+                 <div className="col-6">
+                   <p className="mb-0">{day}</p>
+                 </div>
+                 <div className="col-6">
+                   <p className="mb-0">{time}</p>
+                 </div>
+               </div>
+        ))}
+        </div>
+
+             <div className="col-md-6 d-flex align-items-center justify-content-center">
+              <img
+                src={petty}
+                alt="Cafe Dish"
+                style={{ maxHeight: '300px', objectFit: 'cover' }}
+               />
+             </div>
           </div>
-        </header>
-        <div className="row justify-content-center">
+        </div>
+
+
+        <div className="row">
           <nav className="col">
             <p className="fs-1 text-center">
               What&apos;s next?
@@ -44,7 +96,7 @@ export function Welcome() {
             </ul>
           </nav>
         </div>
-      </div>
+     
     </main>
   );
 }
@@ -110,3 +162,5 @@ const resources = [
     ),
   },
 ];
+
+const menuLink = resources.find(item => item.href === "/cafemenu");
