@@ -42,7 +42,7 @@ app.MapGet("/weatherforecast", () =>
 **/
 
 var cafeMenu = new CafeMenulist[] {
-    new(1,  "burgerwitheggs", "burgerwitheggs.jpg", 20.15),
+    new(1,  "burgerwitheggs", "burgerwitheggs.jpg", 120.15),
     new(2,  "petty", "petty.jpg", 15.50),
     new(3,  "prowndish", "prowndish.jpg", 25.00)
 };
