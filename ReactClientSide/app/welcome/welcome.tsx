@@ -4,17 +4,48 @@
 import logo from "./logo.jpg";
 import cafefrontdesk from "./images/cafefrontdesk.jpg";
 import petty from "./petty.jpg";
+import prawndish from "./Artisan-prawn.jpg";
+import burgerwitheggs from "./burgerwitheggs.jpg";
+
+
 
 export function Welcome() {
   return (
     <main className="container">
-        <div className="row">
-        
-          <img className="col-2" src={logo} alt="Artisan Cafe Canberra logo"/>
-         
-        </div>
-        <div className="row">
-          <h1 style={{ fontFamily: 'Monotype Corsiva' }}>Welcome to Artisan Cafe Canberra</h1>
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+         <div className="container-fluid">
+           <a className="navbar-brand d-flex align-items-center" href="#">
+           <img 
+             src={logo} 
+             alt="Artisan Cafe Canberra logo" 
+             width="100" 
+             height="100" 
+             className="me-2"
+             />
+           </a>
+
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" 
+            aria-expanded="false" aria-label="Toggle navigation"> 
+             <span className="navbar-toggler-icon"></span> 
+          </button> 
+          <div className="collapse navbar-collapse" id="navbarNavAltMarkup"> 
+            <div className="navbar-nav ms-auto"> 
+              <a className="nav-link active" aria-current="page" href="#">Home</a> 
+              <a className="nav-link" href="#">Menu</a> 
+              <a className="nav-link" href="#">Opening Hours</a> 
+              <a className="nav-link" href="#">Contact Us</a> 
+              <a href={menuLink.href} className="btn btn-dark ms-3 mt-lg-0">Order Online</a> 
+              <a href="#" className="btn btn-dark ms-2 mt-lg-0">Sign In</a> 
+            </div> 
+          </div> 
+        </div> 
+      </nav>
+
+        <div className="row mt-5">
+         <h1 style={{fontFamily: 'Monotype Corsiva',fontSize: '3rem'}}>
+           Welcome to Artisan Cafe Canberra
+         </h1>
         </div>
         <div className="row">
            <p> Artisan Canberra Café is a cozy, corner spot nestled in the heart of the city, renowned for its meticulously crafted brews and delectable pastries. With its warm ambiance and dedication to quality, it's a haven for coffee aficionados and pastry enthusiasts alike, where each visit promises a delightful experience curated with artisanal flair.
@@ -23,24 +54,51 @@ export function Welcome() {
            </p>
         </div>
         <div className="row">
-
-           <img className="mb-5" src={cafefrontdesk} alt="Artisan Cafe Canberra shop front"/>
+           <img src={cafefrontdesk} alt="Artisan Cafe Canberra shop front" className="mb-5"/>
         </div>
-        <div className="row">
+        
+        <div className="row mt-5">
         <div className="col">
           <h1 style={{ fontFamily: 'Monotype Corsiva' }}>Cafe Menu</h1>
         </div>
         <div className="col-auto">
           {menuLink && (
             <a href={menuLink.href}>
-              <button>Order Now</button>
+              <button className="btn btn-dark">Order Now</button>
             </a>
           )}
         </div>
         </div>
+        <div className="row"> 
+        <section>
+         <h4>Signature Dishes</h4>
+           <div className="row justify-content-center mt-3">
+             <div className="col-md-4 col-sm-6 mb-3">
+              <div className="dish">
+               <img src={petty} alt="petty plate" className="img-fluid rounded" />
+              <h5 className="mt-2 text-center">Petty Plate</h5>
+             </div>
+           </div>
+
+           <div className="col-md-4 col-sm-6 mb-3">
+             <div className="dish">
+              <img src={prawndish} alt="prawn salad" className="img-fluid rounded" />
+             <h5 className="mt-2 text-center">Prawn Salad</h5>
+             </div>
+           </div>
+
+           <div className="col-md-4 col-sm-6 mb-3">
+             <div className="dish">
+              <img src={burgerwitheggs} alt="burger with eggs" className="img-fluid rounded" />
+             <h5 className="mt-2 text-center">Burger with Eggs</h5>
+             </div>
+           </div>
+          </div>
+        </section>
+        </div>
 
         <div className="container mt-1 px-0">
-          <div className="row">
+          <div className="row mt-5">
             <div className="col-md-6">
               <h1 style={{ fontFamily: 'Monotype Corsiva' }}>Opening Hours</h1>
               {[
@@ -73,30 +131,132 @@ export function Welcome() {
           </div>
         </div>
 
+        <div className="row mt-5">
+          <div className="col">
+          <h1 style={{ fontFamily: 'Monotype Corsiva' }}>Contact Us</h1>
+          </div>
+        </div>
+        <div className="row mb-1">
+          <h4> Address </h4>
+        </div>
+        <div className="row mb-3">
+          <a> Ground Floor Shop 1/121 Marcus Clarke St, Canberra ACT 2601 </a>
+        </div>
+        <div className="row mb-1">
+          <h4> Phone Number </h4>
+        </div>
+        <div className="row mb-3">
+          <a> 0493 979 596 </a>
+        </div>
+        <div className="row mb-1">
+          <h4>Send Us a Message</h4>
+        </div>
+
+      <form>
+        <div className="row">
+          <div className="col-lg-6 mb-3">
+            <div className="row mb-3">
+              <div className="col-md-6">
+                <label htmlFor="firstName" className="form-label">First Name</label>
+                <input type="text" className="form-control" id="firstName" />
+              </div>
+            <div className="col-md-6">
+             <label htmlFor="lastName" className="form-label">Last Name</label>
+             <input type="text" className="form-control" id="lastName" />
+            </div>
+          </div>
+
+          <div className="mb-3">
+            <label htmlFor="emailInput" className="form-label">Email Address</label>
+            <input type="email" className="form-control" id="emailInput" />
+          </div>
+
+          <div className="mb-1">
+            <label htmlFor="phoneNumInput" className="form-label">Phone Number</label>
+            <input type="tel" className="form-control" id="phoneNumInput" />
+          </div>
+        </div>
+        <div className="col-lg-6 mb-3">
+          <div className="mb-3">
+            <label htmlFor="topicSelect" className="form-label">Topic</label>
+            <select className="form-select" id="topicSelect">
+              <option>Table Booking</option>
+              <option>Catering</option>
+              <option>Complaint</option>
+              <option>Lost & Found</option>
+              <option>Hiring</option>
+              <option>Collaboration</option>
+              <option>Others</option>
+            </select>
+          </div>
+          <div className="mb-1">
+            <label htmlFor="comments" className="form-label">Your Comments</label>
+              <textarea
+                className="form-control"
+                id="comments"
+                rows={5}
+                placeholder="Please enter your question or message here."></textarea>
+          </div>
+          </div>
+        </div>
 
         <div className="row">
-          <nav className="col">
-            <p className="fs-1 text-center">
-              What&apos;s next?
-            </p>
-            <ul>
-              {resources.map(({ href, text, icon }) => (
-                <li key={href}>
-                  <a
-                    className="text-blue-700 hover:underline dark:text-blue-500"
-                    href={href}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {icon}
-                    {text}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          <div className="col">
+            <button type="submit" className="btn btn-dark mt-0">Submit</button>
+          </div>
         </div>
-     
+      </form>
+
+      <div className="row mt-5">
+          <div className="col">
+            <h1 style={{ fontFamily: 'Monotype Corsiva' }}>Comments</h1>
+          </div>
+        </div>
+      <section>
+        <div className="container my-5">
+        <div className="row">
+          <div className="col-lg-4 col-md-6 mb-4">
+            <div className="card h-100">
+              <div className="card-body">
+                <p className="card-text">
+                  The service was excellent, attentive without being intrusive. It's definitely a great spot for brunch. I highly recommend it to anyone looking for tasty food and top-notch service. Can't wait to visit again!
+                </p>
+              </div>
+              <div className="card-footer text-muted text-end">
+                From Liu
+              </div>
+            </div>
+          </div>
+
+          <div className="col-lg-4 col-md-6 mb-4">
+            <div className="card h-100">
+              <div className="card-body">
+                <p className="card-text">
+                  We went here for breakfast on Saturday morning and the food was amazing, especially recommend the pancakes!! The service was also very good too! Would recommend for anyone, family friendly
+                </p>
+              </div>
+              <div className="card-footer text-muted text-end">
+                From Berries
+              </div>
+            </div>
+          </div>
+
+          <div className="col-lg-4 col-md-6 mb-4">
+            <div className="card h-100">
+              <div className="card-body">
+                <p className="card-text">
+                  The best double espresso I had in Canberra. Pork roll and chicken burger were very good too :
+                </p>
+              </div>
+              <div className="card-footer text-muted text-end">
+                From Lopez
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+        
     </main>
   );
 }
