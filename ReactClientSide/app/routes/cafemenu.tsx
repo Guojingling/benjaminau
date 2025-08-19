@@ -39,7 +39,7 @@ export default function CafeMenu({loaderData,}: Route.ComponentProps) {
             {items.map(item => (
                 <tr key={item.id} className="table-row  align-middle  text-center   bg-dark text-white">
                     <td>Dish Name: {item.dishName}</td>
-                    <td><img src= {item.dishName} alt={item.dishName} width="340" height="255" /></td>
+                    <td><img src= {item.imageName} alt={item.dishName} width="340" height="255" /></td>
                     <td>Price: {item.price}</td>
                     <td>Display Indicator: {item.IsShown}</td>
                     <td><form action="/action_page.php" method="post"><input type="hidden" name="dishid" value={item.id} /><button className="btn btn-success" type="submit">Order</button></form></td>
