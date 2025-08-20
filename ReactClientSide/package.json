@@ -24,11 +24,10 @@
     "react-router-devtools": "^1.1.0",
     "typescript": "^5.7.2",
     "vite": "^6.2.5",
-    "vite-tsconfig-paths": "^5.1.4",
-    "bootstrap": "^5.3.5"
+    "vite-tsconfig-paths": "^5.1.4"
   },
   "engines": {
-     "node": ">=22",
-     "npm": ">=10"
-   }
+    "node": ">=22",
+    "npm": ">=10"
+  }
 }

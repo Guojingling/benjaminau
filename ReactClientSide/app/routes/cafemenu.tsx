@@ -1,6 +1,8 @@
 import type { Route } from "./+types/cafemenu";
 
-
+import burgerwitheggs from "../welcome/burgerwitheggs.jpg";
+import prowndish from "../welcome/Artisan-prawn.jpg";
+import petty from "../welcome/petty.jpg";
 
 export async function clientLoader({params,}: Route.ClientLoaderArgs) {
     const menuId = params.menuid;
@@ -37,7 +39,7 @@ export default function CafeMenu({loaderData,}: Route.ComponentProps) {
             {items.map(item => (
                 <tr key={item.id} className="table-row  align-middle  text-center   bg-dark text-white">
                     <td>Dish Name: {item.dishName}</td>
-                    <td><img src= {`app/welcome/${item.imageName}`} alt={item.dishName} width="340" height="255" /></td>
+                    <td><img src= {item.imageName} alt={item.dishName} width="340" height="255" /></td>
                     <td>Price: {item.price}</td>
                     <td>Display Indicator: {item.IsShown}</td>
                     <td><form action="/action_page.php" method="post"><input type="hidden" name="dishid" value={item.id} /><button className="btn btn-success" type="submit">Order</button></form></td>
