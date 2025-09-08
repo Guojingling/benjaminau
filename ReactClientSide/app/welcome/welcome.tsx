@@ -34,11 +34,11 @@ export function Welcome() {
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup"> 
             <div className="navbar-nav ms-auto"> 
               <a className="nav-link active" aria-current="page" href="#home">Home</a> 
-              <a className="nav-link" href="#">Menu</a> 
+              <a className="nav-link" href="/cafemenu">Menu</a> 
               <a className="nav-link" href="#hours">Opening Hours</a> 
               <a className="nav-link" href="#contact">Contact Us</a> 
-              <a href={menuLink.href} className="btn btn-brand2 ms-3 mt-lg-0">Order Online</a> 
-              <a href="#" className="btn btn-brand2 ms-2 mt-lg-0">Sign In</a> 
+              <a href="/cafemenu" className="btn btn-brand2 ms-3 mt-lg-0">Order Online</a> 
+              <a href="/login" className="btn btn-brand2 ms-2 mt-lg-0">Sign In</a> 
             </div> 
           </div> 
         </div> 
@@ -66,8 +66,8 @@ export function Welcome() {
           <h1 style={{ fontFamily: 'Monotype Corsiva',fontSize: '3rem' }}>Cafe Menu</h1>
         </div>
         <div className="col-auto">
-          {menuLink && (
-            <a href={menuLink.href}>
+          {(
+            <a href="/cafemenu">
               <button className="btn btn-brand1">Order Now</button>
             </a>
           )}
@@ -269,9 +269,7 @@ export function Welcome() {
              <p className="mb-2">
                Artisan Cafe Canberra
              </p>
-             {/* <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
-               <img src={facebookIcon} alt="Facebook" width="24" height="24" />
-             </a> */}
+// Facebook account yet to be added
            </div>
            <div className="mt-auto">
               <p className="mb-0" style={{ fontFamily: 'Monotype Corsiva', fontSize: '1 rem' }}>
@@ -354,5 +352,3 @@ const resources = [
     ),
   },
 ];
-
-const menuLink = resources.find(item => item.href === "/cafemenu");
