@@ -8,3 +8,59 @@ body {
     color-scheme: dark;
   }
 }
+
+/* Button with brand colour as bg */
+.btn-brand1 {                     
+  background-color: #4E4747; 
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.5rem 1rem; 
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-brand1:hover {
+  background-color: black; 
+  color: #ffffff;
+}
+
+/* Transparent Button */
+.btn-brand2 {
+  background-color: transparent; 
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  padding: 0.5rem 1rem; 
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-brand2:hover {
+  background-color: #ffffff;  
+  color: #4E4747;           
+  border-color: #ffffff;
+}
+
+.bg-brand1 {
+  background-color: #4E4747;
+}
+
+ /* navbar */
+.navbar-nav .nav-link {
+  color: #ffffff !important; 
+  transition: color 0.2s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #d3d3d3 !important; 
+}
+
+/* Footer */
+.footer-link {
+  color: #000000;
+  text-decoration: none; 
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-link:hover {
+  color:#4E4747; 
+  text-decoration: underline;
+}
