@@ -6,7 +6,7 @@ import cafefrontdesk from "./images/cafefrontdesk.jpg";
 import petty from "./petty.jpg";
 import prawndish from "./Artisan-prawn.jpg";
 import burgerwitheggs from "./burgerwitheggs.jpg";
-
+import Footer from '../component/footer';
 
 
 export function Welcome() {
@@ -260,32 +260,7 @@ export function Welcome() {
         </div>
       </section>    
       <div className="row mb-5"></div>
-      <hr className="footer-separator" />
-      <footer className="footer py-3">
-       <div className="container">
-        <div className="row">
-          <div className="col-md-6 d-flex flex-column justify-content-between">
-           <div>
-             <p className="mb-2">
-               Artisan Cafe Canberra
-             </p>
-// Facebook account yet to be added
-           </div>
-           <div className="mt-auto">
-              <p className="mb-0" style={{ fontFamily: 'Monotype Corsiva', fontSize: '1 rem' }}>
-               © 2025 Artisan Cafe Canberra. All rights reserved.
-              </p>
-           </div>
-         </div>
-          <div className="col-md-6 d-flex flex-column align-items-end justify-content-center">
-            <a href="#" className="footer-link mx-3">Menu</a>
-            <a href="#hours" className="footer-link mx-3">Opening Hours</a>
-            <a href="#contact" className="footer-link mx-3">Contact Us</a>
-            <a href="#comment" className="footer-link mx-3">Comments</a>
-          </div>
-        </div>
-       </div>
-      </footer>
+      <Footer />
     </main>
     </body>
   );

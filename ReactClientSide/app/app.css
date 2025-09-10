@@ -23,7 +23,7 @@ body {
   color: #ffffff;
 }
 
-/* Transparent Button */
+/* Transparent Buttons */
 .btn-brand2 {
   background-color: transparent; 
   color: #fff;
@@ -37,6 +37,26 @@ body {
   background-color: #ffffff;  
   color: #4E4747;           
   border-color: #ffffff;
+}
+
+.btn-brand3 {
+  background-color: transparent; 
+  color: #000000;
+  border: 1px solid#4E4747;
+  border-radius: 6px;
+  padding: 0.5rem 1rem; 
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-brand3:hover {
+  background-color: #4E4747;  
+  color: #ffffff;           
+  border-color: #000000;
+}
+
+.btn-brand3.active {
+  background-color: #4E4747;
+  color: #fff;
 }
 
 .bg-brand1 {

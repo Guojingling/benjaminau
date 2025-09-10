@@ -1,38 +1,33 @@
 import type { Route } from "./+types/home";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import '../app.css';
 
 import sandwich from "../register/sandwich.jpg";
-import glasstop from "../register/glasstop.webp";
+import NavbarGlass from "../component/navbar-glasstop";
+import Footer from "../component/footer";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   const checkSubmit = (e: React.FormEvent) => {
   e.preventDefault();
 
-    if (email === "jane.smith@domain.com" && password === "Password123") {
+    if (email == "jane.smith@domain.com" && password == "Password123") {
       setError("");
-// Redirect to profile later
+      navigate("../register/userprofile");
     } else {
       setError("Invalid email or password");
     }
    };
   return (
         <>
-
-      <nav className="navbar navbar-expand-lg"
-        style={{ height: '130px', backgroundImage: `url(${glasstop})`, backgroundSize: 'cover', backgroundPosition: '58.5% 58.5%' }}>
-        <div className="container">
-          <a href="/" className="btn btn-brand2 ms-auto">
-            Homepage
-          </a>
-        </div>
-      </nav>
+      <NavbarGlass />
 
       <div className="container my-5">
         <div className="row align-items-stretch">
@@ -136,33 +131,9 @@ export default function Login() {
            />
           </div>
         </div>
-      
 
-      <hr className="footer-separator" />
-      <footer className="footer py-3"> 
-       <div className="container">
-        <div className="row">
-          <div className="col-md-6 d-flex flex-column justify-content-between">
-           <div>
-             <p className="mb-2">
-               Artisan Cafe Canberra
-             </p>
-           </div>
-           <div className="mt-auto">
-              <p className="mb-0" style={{ fontFamily: 'Monotype Corsiva', fontSize: '1 rem' }}>
-               © 2025 Artisan Cafe Canberra. All rights reserved.
-              </p>
-           </div>
-         </div>
-          <div className="col-md-6 d-flex flex-column align-items-end justify-content-center">
-            <a href="#" className="footer-link mx-3">Menu</a>
-            <a href="#hours" className="footer-link mx-3">Opening Hours</a>
-            <a href="#contact" className="footer-link mx-3">Contact Us</a>
-            <a href="#comment" className="footer-link mx-3">Comments</a>
-          </div>
-        </div>
-       </div>
-      </footer>
+        <Footer />
+      
       </div>
     </>
   );
