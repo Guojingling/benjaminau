@@ -1,9 +1,16 @@
 import Footer from "~/component/footer";
 import NavbarGlass from "../component/navbar-glasstop";
+import HelpRedirect from "../component/help-redirect";
+
+import '../app.css';
+
+import AccDetails from "./accdetails";
+import PrevOrds from "./prevords";
+
 import { Link } from "react-router";
 import { useState } from "react";
 
-export default function UserProfile() {
+export default function UserAcc() {
     const [selected, setSelected] = useState<string | null>(null);
 
     const handleClick = (section: string) => {
@@ -36,21 +43,23 @@ export default function UserProfile() {
           </button>
         </div>
         <div className="col-md-4">
-          <button className="btn btn-brand3 w-100 d-flex flex-column justify-content-center align-items-center"
+          <button className={`btn btn-brand3 w-100 d-flex flex-column justify-content-center align-items-center ${selected === "previousOrder" ? "active" : ""}`}
             onClick={() => handleClick("previousOrder")}>
             <h5>Previous Order</h5>
           </button>
         </div>
         <div className="col-md-4">
-          <button className="btn btn-brand3 w-100 d-flex flex-column justify-content-center align-items-center"
+          <button className={`btn btn-brand3 w-100 d-flex flex-column justify-content-center align-items-center ${selected === "rewards" ? "active" : ""}`}
             onClick={() => handleClick("rewards")}>
             <h5>Rewards</h5>
           </button>
         </div>
       </div>
-      {selected === "profile" && <div>Jane's personal profile info here</div>}
-      {selected === "previousOrder" && <div>Previous Order info</div>}
+      {selected === "profile" && <div><AccDetails /></div>}
+      {selected === "previousOrder" && <div><PrevOrds /></div>}
       {selected === "rewards" && <div>Rewards info</div>}
+
+      <HelpRedirect />
       <Footer />
     </div>
     </>

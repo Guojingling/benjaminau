@@ -59,8 +59,31 @@ body {
   color: #fff;
 }
 
+.btn-brand4 {
+  background-color: transparent; 
+  color: #000000;
+  border: 1px solid#4E4747;
+  border-radius: 6px;
+  padding: 0.5rem 1rem; 
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-brand4:hover {
+  background-color: #000000;  
+  color: #ffffff;           
+}
+
 .bg-brand1 {
   background-color: #4E4747;
+}
+
+.brand-link {
+  color: var(--brand-color, #4E4747) !important;
+}
+
+.brand-link:hover {
+  text-decoration: underline;
+  color: var(--brand-color-dark, #000000) !important;
 }
 
  /* navbars */

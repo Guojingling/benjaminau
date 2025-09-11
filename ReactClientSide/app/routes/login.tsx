@@ -7,6 +7,7 @@ import '../app.css';
 import sandwich from "../register/sandwich.jpg";
 import NavbarGlass from "../component/navbar-glasstop";
 import Footer from "../component/footer";
+import HelpRedirect from "../component/help-redirect";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -113,11 +114,15 @@ export default function Login() {
               </button>
 
               <hr />
-              <div className="d-flex justify-content-between align-items-center">
-                <h5>New to Us?</h5>
-                <a href="/signup" className="btn btn-brand1">
-                  Sign Up
-                </a>
+              <div className="row align-items-center">
+                <div className="col">
+                  <h5>New to Us?</h5>
+                </div>
+                <div className="col-4">
+                  <a href="/signup" className="btn btn-brand1 w-100">
+                    Sign Up
+                  </a>
+                </div>
               </div>
             </form>
           </div>
@@ -132,6 +137,7 @@ export default function Login() {
           </div>
         </div>
 
+        <HelpRedirect />
         <Footer />
       
       </div>
