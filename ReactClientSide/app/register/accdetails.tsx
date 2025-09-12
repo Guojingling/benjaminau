@@ -8,7 +8,7 @@ const AccDetails: React.FC = () => {
   const [showCvv, setShowCvv] = useState(false);
 
   return (
-   // First Name, Last Name, Email, Password
+  // First Name, Last Name, Email, Password, Payment Details (Card, Expiry, CVV)
     <form className="mt-4 container">
       <div className="row align-items-center">
         <div className="col">

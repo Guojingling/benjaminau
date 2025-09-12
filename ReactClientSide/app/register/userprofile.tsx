@@ -6,6 +6,7 @@ import '../app.css';
 
 import AccDetails from "./accdetails";
 import PrevOrds from "./prevords";
+import Rewards from "./rewards";
 
 import { Link } from "react-router";
 import { useState } from "react";
@@ -57,7 +58,7 @@ export default function UserAcc() {
       </div>
       {selected === "profile" && <div><AccDetails /></div>}
       {selected === "previousOrder" && <div><PrevOrds /></div>}
-      {selected === "rewards" && <div>Rewards info</div>}
+      {selected === "rewards" && <div><Rewards /></div>}
 
       <HelpRedirect />
       <Footer />
