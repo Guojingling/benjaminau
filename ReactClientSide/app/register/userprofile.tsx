@@ -22,7 +22,6 @@ export default function UserAcc() {
     <>
       <NavbarGlass />
       <div className="container mt-5">
-
       <div className="row align-items-center my-5">
         <div className="col">
           <h1>
@@ -56,13 +55,14 @@ export default function UserAcc() {
           </button>
         </div>
       </div>
+
       {selected === "profile" && <div><AccDetails /></div>}
       {selected === "previousOrder" && <div><PrevOrds /></div>}
       {selected === "rewards" && <div><Rewards /></div>}
-
+      
       <HelpRedirect />
       <Footer />
-    </div>
+      </div>
     </>
   );
 }

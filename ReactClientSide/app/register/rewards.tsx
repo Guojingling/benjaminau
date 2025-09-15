@@ -2,6 +2,8 @@ import React from "react";
 import "../app.css";
 import { BsFillStarFill } from "react-icons/bs";
 
+import pide from "./pide.webp";
+
 
 const vouchers = [
  {
@@ -71,11 +73,28 @@ const Rewards: React.FC = () => {
                         </div>
                         </div>
                     </div>
-                    {idx !== vouchers.length - 1 && <hr className="mb-3" />}
                 </div>
             ))}
 
-
+            <div className="row align-items-center mt-3">
+              <h5>Member Campaign</h5>
+              <div className="col-md-4 mb-3">
+                <img
+                  src={pide}
+                  alt="Seasonal Special: Pide"
+                  className="img-fluid rounded my-2" 
+                    style={{
+                      width: "100%",
+                      aspectRatio: "1/1",
+                      objectFit: "cover", 
+                    }}
+                />
+                <p className="text-muted"> Seasonal Special: Autumn’s Secret is Here!</p>
+              </div>
+              <div className="col">
+                <p>No other campaigns available at the moment. Stay tuned!</p>
+              </div>
+            </div>
         </div>
       </div>
     </div>
