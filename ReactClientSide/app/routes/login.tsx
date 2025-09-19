@@ -2,12 +2,14 @@ import type { Route } from "./+types/home";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import { Link } from "react-router";
 import '../app.css';
 
 import sandwich from "../register/sandwich.jpg";
 import NavbarGlass from "../component/navbar-glasstop";
 import Footer from "../component/footer";
 import HelpRedirect from "../component/help-redirect";
+import Register from "../register/signup";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -119,9 +121,9 @@ export default function Login() {
                   <h5>New to Us?</h5>
                 </div>
                 <div className="col-4">
-                  <a href="/signup" className="btn btn-brand1 w-100">
+                  <Link to="/Register" className="btn btn-brand1 w-100">
                     Sign Up
-                  </a>
+                  </Link>
                 </div>
               </div>
             </form>

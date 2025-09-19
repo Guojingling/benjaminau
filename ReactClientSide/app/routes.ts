@@ -5,5 +5,6 @@ export default [
     route("order","routes/order.tsx"),
     route("cafemenu","routes/cafemenu.tsx"),
     route("login","routes/login.tsx"),
-    route("register/userprofile","register/userprofile.tsx")
+    route("register/userprofile","register/userprofile.tsx"),
+    route("register","register/signup.tsx")
 ] satisfies RouteConfig;
