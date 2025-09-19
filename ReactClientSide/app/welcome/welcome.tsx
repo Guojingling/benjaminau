@@ -1,51 +1,55 @@
 // import logoDark from "./logo-dark.svg";
 // import logoLight from "./logo-light.svg";
-
+import '../app.css';
 import logo from "./logo.jpg";
 import cafefrontdesk from "./images/cafefrontdesk.jpg";
 import petty from "./petty.jpg";
 import prawndish from "./Artisan-prawn.jpg";
 import burgerwitheggs from "./burgerwitheggs.jpg";
-
+import Footer from '../component/footer';
 
 
 export function Welcome() {
   return (
-    <main className="container">
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
-         <div className="container-fluid">
-           <a className="navbar-brand d-flex align-items-center" href="#">
-           <img 
+    <body>
+      <header>
+        <nav className="navbar navbar-expand-lg bg-brand1">
+          <div className="container">
+            <a className="navbar-brand d-flex align-items-center" href="#">
+             <img 
              src={logo} 
              alt="Artisan Cafe Canberra logo" 
              width="100" 
              height="100" 
-             className="me-2"
-             />
-           </a>
+             className="me-2 rounded-circle"
+            />
+          </a>
 
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" 
-            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" 
-            aria-expanded="false" aria-label="Toggle navigation"> 
-             <span className="navbar-toggler-icon"></span> 
-          </button> 
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" 
+          data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" 
+          aria-expanded="false" aria-label="Toggle navigation"> 
+            <span className="navbar-toggler-icon"></span> 
+        </button> 
+
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup"> 
             <div className="navbar-nav ms-auto"> 
-              <a className="nav-link active" aria-current="page" href="#">Home</a> 
-              <a className="nav-link" href="#">Menu</a> 
-              <a className="nav-link" href="#">Opening Hours</a> 
-              <a className="nav-link" href="#">Contact Us</a> 
-              <a href={menuLink.href} className="btn btn-dark ms-3 mt-lg-0">Order Online</a> 
-              <a href="#" className="btn btn-dark ms-2 mt-lg-0">Sign In</a> 
+              <a className="nav-link active" aria-current="page" href="#home">Home</a> 
+              <a className="nav-link" href="/cafemenu">Menu</a> 
+              <a className="nav-link" href="#hours">Opening Hours</a> 
+              <a className="nav-link" href="#contact">Contact Us</a> 
+              <a href="/cafemenu" className="btn btn-brand2 ms-3 mt-lg-0">Order Online</a> 
+              <a href="/login" className="btn btn-brand2 ms-2 mt-lg-0">Sign In</a> 
             </div> 
           </div> 
         </div> 
       </nav>
+    </header>
 
-        <div className="row mt-5">
-         <h1 style={{fontFamily: 'Monotype Corsiva',fontSize: '3rem'}}>
+    <main className="container mt-5">
+        <div className="row">
+          <h1 id="home" style={{fontFamily: 'Monotype Corsiva',fontSize: '3.5rem'}}>
            Welcome to Artisan Cafe Canberra
-         </h1>
+          </h1>
         </div>
         <div className="row">
            <p> Artisan Canberra Café is a cozy, corner spot nestled in the heart of the city, renowned for its meticulously crafted brews and delectable pastries. With its warm ambiance and dedication to quality, it's a haven for coffee aficionados and pastry enthusiasts alike, where each visit promises a delightful experience curated with artisanal flair.
@@ -59,12 +63,12 @@ export function Welcome() {
         
         <div className="row mt-5">
         <div className="col">
-          <h1 style={{ fontFamily: 'Monotype Corsiva' }}>Cafe Menu</h1>
+          <h1 style={{ fontFamily: 'Monotype Corsiva',fontSize: '3rem' }}>Cafe Menu</h1>
         </div>
         <div className="col-auto">
-          {menuLink && (
-            <a href={menuLink.href}>
-              <button className="btn btn-dark">Order Now</button>
+          {(
+            <a href="/cafemenu">
+              <button className="btn btn-brand1">Order Now</button>
             </a>
           )}
         </div>
@@ -100,7 +104,7 @@ export function Welcome() {
         <div className="container mt-1 px-0">
           <div className="row mt-5">
             <div className="col-md-6">
-              <h1 style={{ fontFamily: 'Monotype Corsiva' }}>Opening Hours</h1>
+              <h1 id="hours" style={{ fontFamily: 'Monotype Corsiva',fontSize: '3rem' }}>Opening Hours</h1>
               {[
                 ["Monday", "7:00 AM - 4:00 PM"],
                 ["Tuesday", "7:00 AM - 4:00 PM"],
@@ -133,7 +137,7 @@ export function Welcome() {
 
         <div className="row mt-5">
           <div className="col">
-          <h1 style={{ fontFamily: 'Monotype Corsiva' }}>Contact Us</h1>
+          <h1 id = "contact" style={{ fontFamily: 'Monotype Corsiva',fontSize: '3rem' }}>Contact Us</h1>
           </div>
         </div>
         <div className="row mb-1">
@@ -193,27 +197,26 @@ export function Welcome() {
             <label htmlFor="comments" className="form-label">Your Comments</label>
               <textarea
                 className="form-control"
-                id="comments"
                 rows={5}
                 placeholder="Please enter your question or message here."></textarea>
           </div>
           </div>
         </div>
 
-        <div className="row">
+        <div className="row mb-5">
           <div className="col">
-            <button type="submit" className="btn btn-dark mt-0">Submit</button>
+            <button type="submit" className="btn btn-brand1">Submit</button>
           </div>
         </div>
       </form>
 
-      <div className="row mt-5">
-          <div className="col">
-            <h1 style={{ fontFamily: 'Monotype Corsiva' }}>Comments</h1>
-          </div>
+      <div className="row mb-3">
+        <div className="col">
+          <h1 id="comments" style={{ fontFamily: 'Monotype Corsiva',fontSize: '3rem' }}>Comments</h1>
         </div>
+      </div>
       <section>
-        <div className="container my-5">
+        <div className="container mt-3 mb-5">
         <div className="row">
           <div className="col-lg-4 col-md-6 mb-4">
             <div className="card h-100">
@@ -255,9 +258,11 @@ export function Welcome() {
           </div>
         </div>
         </div>
-      </section>
-        
+      </section>    
+      <div className="row mb-5"></div>
+      <Footer />
     </main>
+    </body>
   );
 }
 
@@ -322,5 +327,3 @@ const resources = [
     ),
   },
 ];
-
-const menuLink = resources.find(item => item.href === "/cafemenu");
